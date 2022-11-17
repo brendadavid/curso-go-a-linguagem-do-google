@@ -15,18 +15,19 @@ func main() {
 	fmt.Println("2- Exibir Logs")
 	fmt.Println("0- Sair do Programa")
 
-	// O comando Scanf precisa receber o modificador com o tipo de variável e o endereço(ponteiro) da variável
+	// O comando Scan não precisa receber o modificador com o tipo de variável, mas se o tipo for diferente de int a variável recebe 0
 	var comando int
-	fmt.Scanf("%d", &comando)
+	fmt.Scan(&comando)
 
-	// If não usa parênteses e só entende expressões booleanas
-	if comando == 1 {
+	// switch não precisa de break, executa apenas um case e encerra
+	switch comando {
+	case 1:
 		fmt.Println("Monitorando...")
-	} else if comando == 2 {
+	case 2:
 		fmt.Println("Exibindo Logs...")
-	} else if comando == 0 {
+	case 0:
 		fmt.Println("Saindo do Programa")
-	} else {
+	default:
 		fmt.Println("Não conheço este comando")
 	}
 }
