@@ -29,4 +29,6 @@ A melhor prática é usar Slice, que é uma abstração do Array e não precisa 
 
 Usar append para adicionar itens ao Array, ex: append(array, "propriedade"), usar "len" para ler a quantidade de itens e "cap" para saber a capacidade do Array. Quando o append é usado no slice, o Go dobra a capacidade do Array.
 
-for pode ser usado com range ao invés do famoso `i:=0, i<len(array), i++`, ex: `for i, site := range sites`
+O comando *for* pode ser usado com range ao invés do famoso `i:=0, i<len(array), i++`, ex: `for i, site := range sites`
+
+O pacote time tem a função *Sleep* para ter um delay entre as execuções
