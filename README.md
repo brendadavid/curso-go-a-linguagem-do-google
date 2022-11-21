@@ -1,7 +1,7 @@
 # Anotações sobre o código
 
 
- O Go entende que a variável é do tipo que ela recebe quando é inicializada, por exemplo: nome =: "Douglas", por isso a palavra chave var pode ser removida e substituida por :=
+ O Go entende que a variável é do tipo que ela recebe quando é inicializada, por exemplo: nome := "Douglas", por isso a palavra chave var pode ser removida e substituida por :=
 
 No caso do float, como existem dois tipos (float32 e float64), o Go vai inferir que o tipo da variável será float64
 
@@ -22,3 +22,11 @@ Quando é retornado duas variáveis e uma só for utilizada, utilizar o operador
 Não existe *while* e *foreach* no Golang, apenas *for*
 
 A instrução *for*, se for passada vazia, sem argumentos depois da palavra chave "for {intrução}", corresponde a um *while true*
+
+Arrays em Go tem tamanho fixo e deve ser declarado o tipo de dado, ex: var teste [5]string
+
+A melhor prática é usar Slice, que é uma abstração do Array e não precisa informar o tamanho (parecido com ArrayList do Java), e os valores podem ser passados na declaração. Ex: `testeSlice := []string{"teste1", "teste2", "teste3"}`. Tanto o Array quanto o slice, pode passar direto a variável para imprimir, não precisa fazer laço ou usar funções como no Java: `fmt.Println(testeSlice)`
+
+Usar append para adicionar itens ao Array, ex: append(array, "propriedade"), usar "len" para ler a quantidade de itens e "cap" para saber a capacidade do Array. Quando o append é usado no slice, o Go dobra a capacidade do Array.
+
+for pode ser usado com range ao invés do famoso `i:=0, i<len(array), i++`, ex: `for i, site := range sites`
