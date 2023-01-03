@@ -32,3 +32,5 @@ Usar append para adicionar itens ao Array, ex: append(array, "propriedade"), usa
 O comando *for* pode ser usado com range ao invés do famoso `i:=0, i<len(array), i++`, ex: `for i, site := range sites`
 
 O pacote time tem a função *Sleep* para ter um delay entre as execuções
+
+Importantdo o pacote *"io/ioutil"* é possível abrir o arquivo e fazer a leituta em forma de bytes precisando converter para string para printar `arquivo, err := ioutil.ReadFile("sites.txt")`
